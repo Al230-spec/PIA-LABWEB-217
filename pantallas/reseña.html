@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Reseña - FIME</title>
+  <link rel="stylesheet" href="css/reseña.css" />
+</head>
+<body>
+<header>
+  <a href="eventos.html">
+    <img src="images/FIME.png" alt="FIME Logo" />
+  </a>
+  <span class="titulo">Eventos</span>
+  <nav>
+    <div class="centro-nav">
+      <button onclick="irA('estudiantiles.html')">Estudiantiles</button>
+      <button onclick="irA('academicos.html')">Académicos</button>
+      <button onclick="irA('culturales.html')">Culturales</button>
+    </div>
+    <input type="text" id="buscador" placeholder="buscar evento" oninput="filtrarEventos()" />
+  </nav>
+</header>
+
+
+  <main class="contenedor-reseña">
+    <div class="titulo-reseña">Escribe tu reseña:</div>
+    <div class="formulario-reseña">
+      <label for="nombre">Ingresa tu nombre:</label><br />
+      <input type="text" id="nombre" name="nombre" /><br /><br />
+      <label for="comentario">¿Qué te pareció este evento?</label><br />
+      <textarea id="comentario" name="comentario" rows="8"></textarea>
+
+      <div class="botones">
+        <button onclick="aceptarReseña()">Aceptar</button>
+        <button onclick="volverEventos()">Volver</button>
+      </div>
+    </div>
+  </main>
+
+  <script src="js/reseña.js"></script>
+</body>
+</html>
+
