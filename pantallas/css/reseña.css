@@ -4,7 +4,6 @@ body {
   background-color: white;
 }
 
-/* HEADER */
 header {
   background-color: #2ca146;
   color: white;
@@ -23,7 +22,6 @@ header a img {
   height: 85px;
 }
 
-/* Texto "Eventos" centrado entre logo y nav */
 header .titulo {
   position: absolute;
   left: 25%;
@@ -34,7 +32,6 @@ header .titulo {
   text-align: center;
 }
 
-/* Navegación */
 nav {
   display: flex;
   align-items: center;
@@ -70,11 +67,9 @@ nav input[type="text"] {
   font-style: italic;
   font-size: 14px;
   margin-left: auto;
-  margin-right: 30px; /* Lo mueve un poco a la izquierda */
+  margin-right: 30px;
 }
 
-
-/* CUERPO DE LA RESEÑA */
 .contenedor-reseña {
   background-color: #2ca146;
   width: 80%;
@@ -116,7 +111,6 @@ textarea {
   resize: vertical;
 }
 
-/* BOTONES ACEPTAR / VOLVER */
 .botones {
   display: flex;
   justify-content: center;
