@@ -73,6 +73,7 @@ nav input[type="text"] {
 .contenedor {
     background-color: #2ca146;
     width: 80%;
+    max-width: fit-content;
     margin: 40px auto;
     border-radius: 20px;
     padding: 30px;
