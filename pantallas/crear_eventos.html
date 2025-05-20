@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crear eventos</title>
+    <link rel="stylesheet" href="css/creareventos.css" />
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+    <header>
+        <img src="images/FIME.png" alt=""/>
+        <div class="titulo">Administrador</div>
+    </header>
+        <div class="contenedor">
+            <div class="form">
+                <div class="verde">
+                    <h3>Crear eventos</h3>
+                </div>
+            <form id="formulario">
+                <label>Nombre</label> <br>
+                    <input type="text" id="nombre" placeholder="Evento" required><br>
+                <label>Día/Hora</label><br>
+                    <input type="text" id="diah" placeholder="07/25/2025" required><br>
+                <label>Lugar</label><br>
+                    <input type="text" id="lugar" placeholder="Dónde es" required><br>
+                <label>Categoría</label><br>
+                    <input type="text" id="cat" placeholder="Tipo" required><br>
+                <button type="submit">Agregar</button>
+            </form>
+        </div>
+
+            <div class="tab">
+                <table id="tabla">
+                    <thead>
+                    <tr>
+                        <th>Nombre del evento</th>
+                        <th>Día/Hora del evento</th>
+                        <th>Lugar</th>
+                        <th>Categoría</th>
+                        <th>Acciones</th>
+                    </tr>
+                    <tbody>
+
+                    </tbody>
+                </table>
+                </div>
+                </div>
+        <script src="js/creareventos.js"></script>
+</body>
+</html>
