@@ -3,7 +3,7 @@ function aceptarReseña() {
 }
 
 function volverEventos() {
-  window.location.href = "eventos.html";
+  window.location.href = "pantaprincipal.html";
 }
 
 function irA(pagina) {
