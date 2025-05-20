@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Pantalla Principal</title>
+    <link rel="stylesheet" href="css/pantaprincipal.css" />
+</head>
+<body>
+<header>
+    <a href="eventos.html">
+        <img src="images/FIME.png" alt="FIME Logo" />
+    </a>
+    <span class="titulo">Eventos</span>
+    <nav>
+        <div class="centro-nav">
+        <button onclick="irA('estudiantiles.html')">Estudiantiles</button>
+        <button onclick="irA('academicos.html')">Académicos</button>
+        <button onclick="irA('culturales.html')">Culturales</button>
+        </div>
+        <input type="text" id="buscador" placeholder="buscar evento" oninput="filtrarEventos()" />
+    </nav>
+</header>
+<main class="contenedor">
+    <div class="container">
+    <div class="card">
+        <h3>Toma de protesta</h3>
+        <p>Viernes 7 de abril <br>15.00hrs <br>Gimnasio FIME</p>
+        <img src="images/protesta.jpeg" alt="">
+    </div>
+        <div class="card">
+        <h3>Platica "Egresado exitoso"</h3>
+        <p>Jueves 20 de abril <br>10.00hrs <br>Auditorio </p>
+        <img src="images/egresados.jpeg" alt="">
+    </div>
+    <div class="card">
+        <h3>Ferias</h3>
+        <p>Lunes 15 de marzo <br>11.00hrs <br>Pasillo principal</p>
+        <img src="images/feria.jpeg" alt="">
+    </div>
+    </div>
+</main>
+</body>
+</html>
