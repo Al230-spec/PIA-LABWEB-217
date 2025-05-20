@@ -1,0 +1,96 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: white;
+}
+
+header {
+    background-color: #2ca146;
+    color: white;
+    display: flex;
+    align-items: center;
+    padding: 28px 0;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    position: relative;
+}
+
+header a img {
+    position: absolute;
+    left: 30px;
+    top: 0px;
+    height: 85px;
+}
+
+header .titulo {
+    position: absolute;
+    left: 25%;
+    transform: translateX(-50%);
+    font-size: 1.5em;
+    font-weight: bold;
+    color: white;
+    text-align: center;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    gap: 240px;
+    margin-left: auto;
+}
+
+.centro-nav {
+    display: flex;
+    gap: 15px;
+    margin: 0 auto;
+}
+
+nav button {
+    background-color: #1d772f;
+    color: white;
+    border: none;
+    border-radius: 20px;
+    padding: 8px 16px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+nav button:hover {
+    background-color: #145c24;
+}
+
+nav input[type="text"] {
+    background-color: #a3d9a5;
+    border: none;
+    border-radius: 20px;
+    padding: 8px 15px;
+    font-style: italic;
+    font-size: 14px;
+    margin-left: auto;
+    margin-right: 30px;
+}
+
+.contenedor {
+    background-color: #2ca146;
+    width: 80%;
+    margin: 40px auto;
+    border-radius: 20px;
+    padding: 30px;
+}
+
+.container {
+    display: flex;
+    gap: 0;
+}
+
+.card {
+    background-color: #145c24;
+    padding: 15px;
+    border-radius: 15px;
+    font-weight: bold;
+    font-size: 1.2em;
+    margin-bottom: 20px;
+    text-align: left;
+    width: 1800px;
+    margin: 10px;
+}
