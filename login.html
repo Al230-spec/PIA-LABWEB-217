@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>FIME - Acceso</title>
+  <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      background: #ffffff;
+    }
+
+    header {
+      background-color: #009444;
+      color: white;
+      padding: 10px 20px;
+      display: flex;
+      align-items: center;
+      gap: 20px;
+    }
+
+    header img {
+      height: 60px;
+    }
+
+    main {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 85vh;
+      background-color: #009444;
+    }
+
+    .form-container {
+      background: white;
+      border-radius: 30px;
+      padding: 40px;
+      width: 90%;
+      max-width: 400px;
+      text-align: center;
+    }
+
+    h2 {
+      color: #009444;
+      font-size: 28px;
+      margin-bottom: 20px;
+      font-weight: bold;
+    }
+
+    select, input {
+      width: 90%;
+      padding: 12px;
+      border-radius: 30px;
+      border: none;
+      margin: 10px 0;
+      font-size: 16px;
+      text-align: center;
+    }
+
+    .captcha {
+      margin: 15px auto;
+      width: fit-content;
+    }
+
+    button {
+      background-color: #004d25;
+      color: white;
+      font-size: 16px;
+      padding: 10px 30px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      margin-top: 10px;
+    }
+
+    button:hover {
+      background-color: #00391c;
+    }
+
+    .hidden {
+      display: none;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <img src="logo fime.gif" />
+  </header>
+
+  <main>
+    <div class="form-container">
+
+      <!-- Pantalla de inicio -->
+      <div id="startScreen">
+        <h2>Bienvenido</h2>
+        <button onclick="mostrarLogin()">Iniciar sesión</button><br><br>
+        <button onclick="mostrarRegistro()">Registrarse</button>
+      </div>
+
+      <!-- Pantalla de Login -->
+      <div id="loginForm" class="hidden">
+        <h2>Inicio de sesión</h2>
+        <select id="rol" onchange="cambiarFormulario()">
+          <option value="" disabled selected>Seleccionar...</option>
+          <option value="estudiante">Estudiante</option>
+          <option value="admin">Administrador</option>
+        </select>
+        <div id="loginInputs"></div>
+        <button onclick="volverInicio()">Volver</button>
+      </div>
+
+      <!-- Pantalla de nuevo administrador -->
+      <div id="adminForm" class="hidden">
+        <h2>Nuevo administrador</h2>
+        <input type="email" id="adminCorreo" placeholder="Ingrese su correo universitario" />
+        <input type="password" id="adminPassword" placeholder="Crear una contraseña" />
+        <input type="password" id="adminClave" placeholder="Ingrese la clave de administrador" />
+        <div class="g-recaptcha captcha" data-sitekey="TU_SITE_KEY_AQUÍ"></div>
+        <button onclick="registrarAdmin()">Registrarme</button>
+        <button onclick="volverInicio()">Volver</button>
+      </div>
+
+    </div>
+  </main>
+
+  <script>
+    function mostrarLogin() {
+      document.getElementById("startScreen").classList.add("hidden");
+      document.getElementById("loginForm").classList.remove("hidden");
+    }
+
+    function mostrarRegistro() {
+      document.getElementById("startScreen").classList.add("hidden");
+      document.getElementById("adminForm").classList.remove("hidden");
+    }
+
+    function volverInicio() {
+      document.getElementById("startScreen").classList.remove("hidden");
+      document.getElementById("loginForm").classList.add("hidden");
+      document.getElementById("adminForm").classList.add("hidden");
+      document.getElementById("loginInputs").innerHTML = "";
+      document.getElementById("rol").value = "";
+    }
+
+    function cambiarFormulario() {
+      const rol = document.getElementById("rol").value;
+      const loginInputs = document.getElementById("loginInputs");
+
+      loginInputs.innerHTML = "";
+
+      if (rol === "estudiante") {
+        loginInputs.innerHTML = `
+          <input type="email" id="correoEstudiante" placeholder="Ingrese su correo universitario" />
+          <input type="password" id="passEstudiante" placeholder="Contraseña" />
+          <div class="g-recaptcha captcha" data-sitekey="TU_SITE_KEY_AQUÍ"></div>
+          <button onclick="ingresarEstudiante()">Ingresar</button>
+        `;
+        grecaptcha.render(document.querySelector('.g-recaptcha'));
+      } else if (rol === "admin") {
+        document.getElementById("loginForm").classList.add("hidden");
+        document.getElementById("adminForm").classList.remove("hidden");
+      }
+    }
+
+    function ingresarEstudiante() {
+      const correo = document.getElementById("correoEstudiante").value;
+      const pass = document.getElementById("passEstudiante").value;
+
+      if (!correo.endsWith("@uanl.edu.mx")) {
+        alert("El correo debe terminar en @uanl.edu.mx");
+        return;
+      }
+
+      if (!pass) {
+        alert("Ingrese su contraseña");
+        return;
+      }
+
+      alert("Inicio de sesión exitoso (simulado)");
+    }
+
+    function registrarAdmin() {
+      const correo = document.getElementById("adminCorreo").value;
+      const pass = document.getElementById("adminPassword").value;
+      const clave = document.getElementById("adminClave").value;
+
+      if (!correo || !pass || !clave) {
+        alert("Por favor, complete todos los campos");
+        return;
+      }
+
+      if (clave !== "12345") {
+        alert("Clave de administrador incorrecta");
+        return;
+      }
+
+      alert("Registro exitoso de administrador (simulado)");
+    }
+  </script>
+</body>
+</html>
