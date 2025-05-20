@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ver usuarios</title>
+    <link rel="stylesheet" href="css/usuarios.css">
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.bundle.min.js"></script>
+</head>
+<body>
+    <header>
+        <img src="images/FIME.png" alt=""/>
+        <div class="titulo">Administrador</div>
+        <p class="derecha"><input type="text" id="buscador" placeholder="buscar usario" oninput="filtrarUsuarios()" /></p>
+    </header>
+    <div>
+        <table class="table table-bordered table-hover mt-3">
+            <thead>
+                <tr>
+                    <th>Día/Hora en el que se registro</th>
+                    <th>Correo</th>
+                    <th>Acción</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr><td><p>17.08hrs</p><p>25/04/2025</p></td><td>miriam.garzav@uanl.edu.mx</td><td><button class="btn btn-danger float-right eliminar">Eliminar usuario permanente</button></td></tr>
+                <tr><td><p>17.08hrs</p><p>25/04/2025</p></td><td>alan.gonzalezmj@uanl.edu.mx</td><td><button class="btn btn-danger float-right eliminar">Eliminar usuario permanente</button></td></tr>
+                <tr><td><p>17.08hrs</p><p>25/04/2025</p></td><td>daniel.cruzbllz@uanl.edu.mx</td><td><button class="btn btn-danger float-right eliminar">Eliminar usuario permanente</button></td></tr>
+
+            </tbody>
+        </table>
+    </div>
+
+    <script src="js/funciones.js"></script>
+</body>
+</html>
