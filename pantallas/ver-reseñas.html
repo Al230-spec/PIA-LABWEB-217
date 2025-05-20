@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Reseña - FIME</title>
+    <link rel="stylesheet" href="css/ver-reseñas.css" />
+</head>
+<body>
+<header>
+    <a href="eventos.html">
+        <img src="images/FIME.png" alt="FIME Logo" />
+    </a>
+    <span class="titulo">Eventos</span>
+    <nav>
+        <div class="centro-nav">
+        <button onclick="irA('estudiantiles.html')">Estudiantiles</button>
+        <button onclick="irA('academicos.html')">Académicos</button>
+        <button onclick="irA('culturales.html')">Culturales</button>
+        </div>
+        <input type="text" id="buscador" placeholder="buscar evento" oninput="filtrarEventos()" />
+    </nav>
+</header>
+<main class="contenedor-reseña">
+    <div class="titulo-reseña">Reseñas</div>
+    <div class="container">
+    <div class="card">
+        <h3>Alan Alberto González Mejía</h3>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nesciunt similique illo aperiam sed temporibus! Quo dignissimos error quod, sequi mollitia incidunt. Quasi libero molestias ipsam repellendus minima eveniet commodi laborum!</p>
+    </div>
+        <div class="card">
+        <h3>Miriam Moreno</h3>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nesciunt similique illo aperiam sed temporibus! Quo dignissimos error quod, sequi mollitia incidunt. Quasi libero molestias ipsam repellendus minima eveniet commodi laborum!</p>
+    </div>
+    </div>
+</main>
+</body>
+</html>
